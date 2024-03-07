@@ -160,33 +160,3 @@ t = tuple(b) # Set to tuple
 
 # Accesing in a list 0(n)
 # Accesing in a set 0(1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

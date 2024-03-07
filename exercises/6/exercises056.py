@@ -12,3 +12,4 @@ def dot_product(list1, list2):
     return sum(list1[i] * list2[i] for i in range(len(list1)))
 
 print(dot_product([1.0, 2.0, 3.0], [4.0, 5.0, 6.0])) # 32.0
+
