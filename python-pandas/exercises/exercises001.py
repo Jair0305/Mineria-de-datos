@@ -1,6 +1,6 @@
 import pandas as pd
 
-w_d = 'C:/Users/chama/Desktop/mineria-de-datos/mineria-de-datos/python-pandas/data/'
+w_d = 'D:/Users/chama/Desktop/Mineria-de-datos/python-pandas/data/'
 
 f_n = 'info_students.csv'
 
@@ -46,3 +46,41 @@ l_p.sort(reverse = True)
 
 for p,f,v in l_p:
     print(f'{v}:{f}:{p}%',end = ' ')
+
+import matplotlib.pyplot as plt #Modulo apra crear graficas sencillas
+
+lab = []
+val = []
+for p,f,v in l_p:
+    lab.append(v)
+    val.append(f)
+
+plt.pie(val, labels = lab, autopct = '%1.1f%%')
+plt.title('Sexo de los estudiantes')
+
+plt.figure()#Crea un nuevo papel para dibujar otra grafica, evita que 2 graficas se encimen
+
+plt.bar(lab,val)
+plt.title('Sexo de los estudiantes')
+
+#Hay 2 partes cuando se trabaja con el analisis de datosÑ
+#1. Los calculos tal cual para encontrar patrones, asociaciones, reglas, estadisticas, etc.
+#2.Una interpretacion, resumen y rpeorte de los resultados se envia esto a las personas encargadas de tomar decisiones o a
+#una aplicacion externa
+
+#En la parte de la interpretacion, podemos incluir especulaciones e hipotesis, para tratar de explicar los datos.
+#Sin embargo, hay que tener cuidado cuando se hagan estas expeculaciones e hipotesis.
+#Primero se deberia intentar probar que las hipotesis sean correctas dentro del marco estadistico
+
+#Ahora esto no siemrpe es factible
+
+#Resumen de mis daots:
+#-Hay 47% de mujeres y 53% de hombres
+#   -Son cantidades similares, hay 6% mas de hombresque de mujeres
+#-por que?
+#Hipotesis/especulaciones:
+#   -Las ingenierias tienenmas hombres que mujeres, pero otras carreras tienen mas mujeres que hombres, nivelan la poblacion
+#   -El diseno de la recopilacion de datos, pedia explicitamente un equilibrio entre hombre y mujeres.
+#   -Se capturaron mal los datos, hubieorn perosnas que no capturaron informaiconde las mujeres
+#La uncia hipoteis sostenible es la segunda
+#
